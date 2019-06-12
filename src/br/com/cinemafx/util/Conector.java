@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conector {
-    static String url = "jdbc:mysql://localhost/cinema";
+    static String url = "jdbc:mysql://localhost:3306/cinema";
     static String usuario = "root";
     static String senha = "";
     static Connection con;

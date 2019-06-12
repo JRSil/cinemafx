@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cinemafx.control.FXMLVBoxMainController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="menuItemCadastrosFilmes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosFilmes" text="Filmes" />
+                  <MenuItem fx:id="menuItemCadastrosSessoes" mnemonicParsing="false" text="Sessoes" />
+                  <MenuItem fx:id="menuItemCadastrosAtendentes" mnemonicParsing="false" text="Atendentes" />
+                  <MenuItem fx:id="menuItemCadastrosSalas" mnemonicParsing="false" text="Salas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Vendas">
+            <items>
+              <MenuItem fx:id="menuItemVendasIngressos" mnemonicParsing="false" text="Ingressos" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="378.0" prefWidth="600.0" />
+   </children>
+</VBox>
