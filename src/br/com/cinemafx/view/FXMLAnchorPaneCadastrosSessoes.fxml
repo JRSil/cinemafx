@@ -56,9 +56,9 @@
                   </GridPane>
                   <Group layoutX="7.0" layoutY="14.0">
                      <children>
-                        <Button fx:id="buttonSessaoInserir" layoutX="52.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
-                        <Button fx:id="buttonSessaoAlterar" layoutX="152.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
-                        <Button fx:id="buttonSessaoRemover" layoutX="252.0" layoutY="322.0" mnemonicParsing="false" text="Remover" />
+                        <Button fx:id="buttonInserir" layoutX="52.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
+                        <Button fx:id="buttonAlterar" layoutX="152.0" layoutY="322.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
+                        <Button fx:id="buttonRemover" layoutX="252.0" layoutY="322.0" mnemonicParsing="false" text="Remover" />
                      </children>
                   </Group>
                </children>

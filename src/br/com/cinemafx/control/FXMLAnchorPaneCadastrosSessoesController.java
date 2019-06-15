@@ -25,11 +25,11 @@ public class FXMLAnchorPaneCadastrosSessoesController implements Initializable {
     @FXML
     private TableColumn<Filme, String> tableColumnSessaoIdFilme;
     @FXML
-    private Button buttonSessaoInserir;
+    private Button buttonInserir;
     @FXML
-    private Button buttonSessaoAlterar;
+    private Button buttonAlterar;
     @FXML
-    private Button buttonSessaoRemover;
+    private Button buttonRemover;
     @FXML
     private Label labelSessaoCodigoSessao;
     @FXML

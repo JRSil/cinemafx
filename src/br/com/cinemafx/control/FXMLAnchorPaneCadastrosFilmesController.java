@@ -2,18 +2,24 @@ package br.com.cinemafx.control;
 
 import br.com.cinemafx.bean.Filme;
 import br.com.cinemafx.dao.FilmeDAO;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class FXMLAnchorPaneCadastrosFilmesController implements Initializable {
 
@@ -24,11 +30,11 @@ public class FXMLAnchorPaneCadastrosFilmesController implements Initializable {
     @FXML
     private TableColumn<Filme, String> tableColumnFilmeCategoria;
     @FXML
-    private Button buttonFilmeInserir;
+    private Button buttonInserir;
     @FXML
-    private Button buttonFilmeAlterar;
+    private Button buttonAlterar;
     @FXML
-    private Button buttonFilmeRemover;
+    private Button buttonRemover;
     @FXML
     private Label labelFilmeCodigo;
     @FXML
@@ -86,6 +92,67 @@ public class FXMLAnchorPaneCadastrosFilmesController implements Initializable {
             labelFilmeVigencia.setText("");
             labelFilmeCategoria.setText("");
         }
+    }
+    
+    @FXML
+    public void handleButtonInserir() throws IOException{
+        Filme f = new Filme();
+        boolean buttonConfirmarClicked = showFXMLAnchorPaneCadastrosFilmesDialog(f);
+        if(buttonConfirmarClicked){
+            filmeDAO.insert(f);
+            carregarTableViewFilme();
+        }
+    }
+    
+    @FXML
+    public void handleButtonAlterar() throws IOException {
+        Filme f = tableViewFilmes.getSelectionModel().getSelectedItem();
+        if(f != null){
+            boolean buttonConfirmarClicked = showFXMLAnchorPaneCadastrosFilmesDialog(f);
+            if(buttonConfirmarClicked){
+                filmeDAO.update(f);
+                carregarTableViewFilme();
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Por favor, escolha um filme na Tabela");
+            alert.show();
+        }
+    }
+    
+    @FXML
+    public void handleButtonRemover() throws IOException {
+        Filme f = tableViewFilmes.getSelectionModel().getSelectedItem();
+        if(f != null){
+            filmeDAO.delete(f);
+            carregarTableViewFilme();
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Por favor, escolha um filme na Tabela");
+            alert.show();
+        }
+    }
+    
+    public boolean showFXMLAnchorPaneCadastrosFilmesDialog(Filme f) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(FXMLAnchorPaneCadastrosFilmesDialogController.class.getResource("br/com/cinemafx/view/FXMLAnchorPaneCadastrosFilmesDialog.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+        
+        //Criando o Stage de Dialog
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("Cadastro de Filmes");
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);
+        
+        //Setando o cliente no Control
+        FXMLAnchorPaneCadastrosFilmesDialogController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.setFilme(f);
+        
+        //Mostra o Dialog e espera ate que o user feche
+        dialogStage.showAndWait();
+        
+        return controller.isButtonConfirmarClicked();
     }
     
 }

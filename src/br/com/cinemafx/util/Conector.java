@@ -8,13 +8,15 @@ public class Conector {
     static String url = "jdbc:mysql://localhost:3306/cinema";
     static String usuario = "root";
     static String senha = "";
-    static Connection con;
+    static Connection con = null;
     
     public static Connection getConexao() throws SQLException {
+        System.out.println("Conectando ao banco...");
         try{
-            Class.forName("org.gjt.mm.mysql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             if(con == null){
                 con = (Connection) DriverManager.getConnection(url, usuario, senha);
+                System.out.println("Conectado.");
             }
             return con;
         }catch(ClassNotFoundException e){
