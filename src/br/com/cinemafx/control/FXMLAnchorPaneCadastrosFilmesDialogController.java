@@ -1,6 +1,7 @@
 package br.com.cinemafx.control;
 
 import br.com.cinemafx.bean.Filme;
+import br.com.cinemafx.util.MaskedTextField;
 import java.net.URL;
 import java.sql.Date;
 import java.util.ResourceBundle;
@@ -29,13 +30,13 @@ public class FXMLAnchorPaneCadastrosFilmesDialogController implements Initializa
     @FXML
     private TextField textFieldFilmeNome;
     @FXML
-    private TextField textFieldFilmeClassificacao;
+    private MaskedTextField textFieldFilmeClassificacao;
     @FXML
-    private TextField textFieldFilmeDuracao;
+    private MaskedTextField textFieldFilmeDuracao;
     @FXML
     private TextField textFieldFilmeCartaz;
     @FXML
-    private TextField textFieldFilmeVigencia;
+    private MaskedTextField textFieldFilmeVigencia;
     @FXML
     private TextField textFieldFilmeCategoria;
     @FXML
@@ -85,7 +86,9 @@ public class FXMLAnchorPaneCadastrosFilmesDialogController implements Initializa
     @FXML
     public void handleButtonConfirmar(){
         if(validarEntradaDeDados()){
+            System.out.println(textFieldFilmeNome.getText());
             f.setNomeFilme(textFieldFilmeNome.getText());
+            System.out.println(textFieldFilmeClassificacao.getText());
             f.setClassificacao(Integer.valueOf(textFieldFilmeClassificacao.getText()));
             f.setDuracao(Float.valueOf(textFieldFilmeDuracao.getText()));
             f.setCartaz(Boolean.valueOf(textFieldFilmeCartaz.getText()));

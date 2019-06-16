@@ -1,6 +1,7 @@
 package br.com.cinemafx.control;
 
 import br.com.cinemafx.bean.Atendente;
+import br.com.cinemafx.util.MaskedTextField;
 import java.net.URL;
 import java.sql.Date;
 import java.util.ResourceBundle;
@@ -16,9 +17,9 @@ public class FXMLAnchorPaneCadastrosAtendentesDialogController implements Initia
     @FXML
     private TextField textFieldAtendenteNome;
     @FXML
-    private TextField textFieldAtendenteCPF;
+    private MaskedTextField textFieldAtendenteCPF;
     @FXML
-    private TextField textFieldAtendenteDataNasc;
+    private MaskedTextField textFieldAtendenteDataNasc;
     @FXML
     private TextField textFieldAtendenteEmail;
     @FXML

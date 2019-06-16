@@ -6,6 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import br.com.cinemafx.util.MaskedTextField?>
+
 
 <AnchorPane id="AnchorPane" prefHeight="257.0" prefWidth="426.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.com.cinemafx.control.FXMLAnchorPaneCadastrosFilmesDialogController">
    <children>
@@ -30,10 +32,10 @@
             <Label fx:id="labelFilmeVigencia" text="Vigencia" GridPane.rowIndex="4" />
             <Label fx:id="labelFilmeCategoria" text="Categoria" GridPane.rowIndex="5" />
             <TextField fx:id="textFieldFilmeNome" GridPane.columnIndex="1" />
-            <TextField fx:id="textFieldFilmeClassificacao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="textFieldFilmeDuracao" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <MaskedTextField mask="##" fx:id="textFieldFilmeClassificacao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <MaskedTextField mask="#.##" placeholder="x.xxH" fx:id="textFieldFilmeDuracao" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="textFieldFilmeCartaz" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="textFieldFilmeVigencia" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <MaskedTextField mask="####-##-##" placeholder="AAAA-MM-DD" fx:id="textFieldFilmeVigencia" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="textFieldFilmeCategoria" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>

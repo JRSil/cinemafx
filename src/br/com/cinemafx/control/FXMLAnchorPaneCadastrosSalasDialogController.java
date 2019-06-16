@@ -1,8 +1,8 @@
 package br.com.cinemafx.control;
 
 import br.com.cinemafx.bean.Sala;
+import br.com.cinemafx.util.MaskedTextField;
 import java.net.URL;
-import java.sql.Date;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,7 +16,7 @@ public class FXMLAnchorPaneCadastrosSalasDialogController implements Initializab
     @FXML
     private TextField textFieldSalasTipoImagem;
     @FXML
-    private TextField textFieldSalasLotacao;
+    private MaskedTextField textFieldSalasLotacao;
     @FXML
     private Button buttonConfirmar;
     @FXML

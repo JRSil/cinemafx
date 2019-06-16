@@ -1,6 +1,7 @@
 package br.com.cinemafx.control;
 
 import br.com.cinemafx.bean.Sessao;
+import br.com.cinemafx.util.MaskedTextField;
 import java.net.URL;
 import java.sql.Date;
 import java.util.ResourceBundle;
@@ -14,15 +15,15 @@ import javafx.stage.Stage;
 public class FXMLAnchorPaneCadastrosSessoesDialogController implements Initializable {
 
     @FXML
-    private TextField textFieldSessoesNumeroSala;
+    private MaskedTextField textFieldSessoesNumeroSala;
     @FXML
-    private TextField textFieldSessoesDia;
+    private MaskedTextField textFieldSessoesDia;
     @FXML
-    private TextField textFieldSessoesHora;
+    private MaskedTextField textFieldSessoesHora;
     @FXML
     private TextField textFieldSessoesDublagem;
     @FXML
-    private TextField textFieldSessoesCodigoFilme;
+    private MaskedTextField textFieldSessoesCodigoFilme;
     @FXML
     private Button buttonConfirmar;
     @FXML

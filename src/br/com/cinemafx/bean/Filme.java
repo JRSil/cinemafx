@@ -24,7 +24,7 @@ public class Filme {
     }
 
     public void setNomeFilme(String nome) {
-        this.nomeFilme = nomeFilme;
+        this.nomeFilme = nome;
     }
 
     public Integer getClassificacao() {

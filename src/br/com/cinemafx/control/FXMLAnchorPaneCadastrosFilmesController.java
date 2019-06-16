@@ -65,7 +65,7 @@ public class FXMLAnchorPaneCadastrosFilmesController implements Initializable {
     }    
     
     public void carregarTableViewFilme(){
-        tableColumnFilmeNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        tableColumnFilmeNome.setCellValueFactory(new PropertyValueFactory<>("nomeFilme"));
         tableColumnFilmeCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria"));
         
         listFilmes = filmeDAO.select();

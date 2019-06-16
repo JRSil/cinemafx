@@ -6,6 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import br.com.cinemafx.util.MaskedTextField?>
+
 
 <AnchorPane id="AnchorPane" prefHeight="277.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.com.cinemafx.control.FXMLAnchorPaneCadastrosAtendentesDialogController">
    <children>
@@ -32,8 +34,8 @@
             <Label text="Senha" GridPane.rowIndex="5" />
             <Label text="Tipo" GridPane.rowIndex="6" />
             <TextField fx:id="textFieldAtendenteNome" GridPane.columnIndex="1" />
-            <TextField fx:id="textFieldAtendenteCPF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="textFieldAtendenteDataNasc" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <MaskedTextField mask="###.###.###-##" fx:id="textFieldAtendenteCPF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <MaskedTextField mask="####-##-##" placeholder="AAAA-MM-DD" fx:id="textFieldAtendenteDataNasc" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="textFieldAtendenteEmail" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="textFieldAtendenteUser" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="textFieldAtendenteSenha" GridPane.columnIndex="1" GridPane.rowIndex="5" />

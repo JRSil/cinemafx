@@ -62,14 +62,14 @@
                         <Label text="User" GridPane.rowIndex="5" />
                         <Label text="Senha" GridPane.rowIndex="6" />
                         <Label text="Tipo" GridPane.rowIndex="7" />
-                        <Label fx:id="labelAtendenteCodigo" text="Label" GridPane.columnIndex="1" />
-                        <Label fx:id="labelAtendenteNome" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="labelAtendenteCPF" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="labelAtendenteDataNasc" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="labelAtendenteEmail" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label fx:id="labelAtendenteUser" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label fx:id="labelAtendenteSenha" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Label fx:id="labelAtendenteTipo" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label fx:id="labelAtendenteCodigo" GridPane.columnIndex="1" />
+                        <Label fx:id="labelAtendenteNome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelAtendenteCPF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelAtendenteDataNasc" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelAtendenteEmail" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelAtendenteUser" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelAtendenteSenha" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="labelAtendenteTipo" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                      </children>
                   </GridPane>
                </children>

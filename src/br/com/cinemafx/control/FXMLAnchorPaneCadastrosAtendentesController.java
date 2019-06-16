@@ -67,7 +67,7 @@ public class FXMLAnchorPaneCadastrosAtendentesController implements Initializabl
     
     public void carregarTableViewAtendente(){
         tableColumnAtendenteNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        tableColumnAtendenteCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+        tableColumnAtendenteCPF.setCellValueFactory(new PropertyValueFactory<>("CPF"));
         
         listAtendentes = atendenteDAO.select();
         

@@ -6,6 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import br.com.cinemafx.util.MaskedTextField?>
+
 
 <AnchorPane id="AnchorPane" prefHeight="226.0" prefWidth="313.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.com.cinemafx.control.FXMLAnchorPaneCadastrosSessoesDialogController">
    <children>
@@ -27,11 +29,11 @@
             <Label text="Hora" GridPane.rowIndex="2" />
             <Label text="Dublagem" GridPane.rowIndex="3" />
             <Label text="Codigo do Filme" GridPane.rowIndex="4" />
-            <TextField fx:id="textFieldSessoesNumeroSala" GridPane.columnIndex="1" />
-            <TextField fx:id="textFieldSessoesDia" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="textFieldSessoesHora" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <MaskedTextField mask="####" fx:id="textFieldSessoesNumeroSala" GridPane.columnIndex="1" />
+            <MaskedTextField mask="####-##-##" placeholder="AAAA-MM-DD" fx:id="textFieldSessoesDia" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <MaskedTextField mask="##:##" placeholder="hh:mm" fx:id="textFieldSessoesHora" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="textFieldSessoesDublagem" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="textFieldSessoesCodigoFilme" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <MaskedTextField mask="####" fx:id="textFieldSessoesCodigoFilme" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Group layoutX="-109.0" layoutY="-33.0">
