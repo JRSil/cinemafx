@@ -6,6 +6,7 @@ import java.sql.Date;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -73,24 +74,66 @@ public class FXMLAnchorPaneCadastrosFilmesDialogController implements Initializa
 
     public void setFilme(Filme f) {
         this.f = f;
+        this.textFieldFilmeNome.setText(f.getNomeFilme());
+        this.textFieldFilmeClassificacao.setText(String.valueOf(f.getClassificacao()));
+        this.textFieldFilmeDuracao.setText(String.valueOf(f.getDuracao()));
+        this.textFieldFilmeCartaz.setText(String.valueOf(f.isCartaz()));
+        this.textFieldFilmeVigencia.setText(String.valueOf(f.getVigencia()));
+        this.textFieldFilmeCategoria.setText(f.getCategoria());
     }
     
     @FXML
     public void handleButtonConfirmar(){
-        f.setNomeFilme(textFieldFilmeNome.getText());
-        f.setClassificacao(Integer.valueOf(textFieldFilmeClassificacao.getText()));
-        f.setDuracao(Float.valueOf(textFieldFilmeDuracao.getText()));
-        f.setCartaz(Boolean.valueOf(textFieldFilmeCartaz.getText()));
-        f.setVigencia(Date.valueOf(textFieldFilmeVigencia.getText()));
-        f.setCategoria(textFieldFilmeCategoria.getText());
-        
-        buttonConfirmarClicked = true;
-        dialogStage.close();
+        if(validarEntradaDeDados()){
+            f.setNomeFilme(textFieldFilmeNome.getText());
+            f.setClassificacao(Integer.valueOf(textFieldFilmeClassificacao.getText()));
+            f.setDuracao(Float.valueOf(textFieldFilmeDuracao.getText()));
+            f.setCartaz(Boolean.valueOf(textFieldFilmeCartaz.getText()));
+            f.setVigencia(Date.valueOf(textFieldFilmeVigencia.getText()));
+            f.setCategoria(textFieldFilmeCategoria.getText());
+
+            buttonConfirmarClicked = true;
+            dialogStage.close();
+        }
     }
     
     @FXML
     public void handleButtonCancelar(){
         dialogStage.close();
+    }
+    
+    private boolean validarEntradaDeDados(){
+        String errorMessage = "";
+        
+        if(textFieldFilmeNome.getText() == null || textFieldFilmeNome.getText().length() == 0){
+            errorMessage += "Nome invalido!\n";
+        }
+        if(textFieldFilmeClassificacao.getText() == null || textFieldFilmeClassificacao.getText().length() == 0){
+            errorMessage += "Classificacao invalida!\n";
+        }
+        if(textFieldFilmeDuracao.getText() == null || textFieldFilmeDuracao.getText().length() == 0){
+            errorMessage += "Duracao invalida!\n";
+        }
+        if(textFieldFilmeCartaz.getText() == null || textFieldFilmeCartaz.getText().length() == 0){
+            errorMessage += "Cartaz sem resposta!\n";
+        }
+        if(textFieldFilmeVigencia.getText() == null || textFieldFilmeVigencia.getText().length() == 0){
+            errorMessage += "Vigencia invalida!\n";
+        }
+        if(textFieldFilmeCategoria.getText() == null || textFieldFilmeCategoria.getText().length() == 0){
+            errorMessage += "Categoria invalida!\n";
+        }
+        
+        if(errorMessage.length() == 0){
+            return true;
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro no cadastro");
+            alert.setHeaderText("Campos invalidos, por favor corrija...");
+            alert.setContentText(errorMessage);
+            alert.show();
+            return false;
+        }
     }
     
 }

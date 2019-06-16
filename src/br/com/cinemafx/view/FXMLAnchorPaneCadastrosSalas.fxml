@@ -33,9 +33,9 @@
                   </Label>
                   <Group>
                      <children>
-                        <Button fx:id="buttonAlterar" layoutX="152.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
-                        <Button fx:id="buttonRemover" layoutX="252.0" layoutY="336.0" mnemonicParsing="false" text="Remover" />
-                        <Button fx:id="buttonInserir" layoutX="52.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
+                        <Button fx:id="buttonAlterar" layoutX="152.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
+                        <Button fx:id="buttonRemover" layoutX="252.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleButtonRemover" text="Remover" />
+                        <Button fx:id="buttonInserir" layoutX="52.0" layoutY="336.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
                      </children>
                   </Group>
                   <GridPane layoutX="94.0" layoutY="126.0">

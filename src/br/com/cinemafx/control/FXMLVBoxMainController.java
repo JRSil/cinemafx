@@ -41,4 +41,16 @@ public class FXMLVBoxMainController implements Initializable {
         anchorPane.getChildren().setAll(a);
     }
     
+    @FXML
+    public void handleMenuItemCadastrosSalas() throws IOException {
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/br/com/cinemafx/view/FXMLAnchorPaneCadastrosSalas.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
+    
+    @FXML
+    public void handleMenuItemCadastrosAtendentes() throws IOException {
+        AnchorPane a = (AnchorPane) FXMLLoader.load(getClass().getResource("/br/com/cinemafx/view/FXMLAnchorPaneCadastrosAtendentes.fxml"));
+        anchorPane.getChildren().setAll(a);
+    }
+    
 }

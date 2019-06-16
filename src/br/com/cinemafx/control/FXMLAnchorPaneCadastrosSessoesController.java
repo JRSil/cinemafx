@@ -1,29 +1,34 @@
 package br.com.cinemafx.control;
 
-import br.com.cinemafx.bean.Filme;
 import br.com.cinemafx.bean.Sessao;
 import br.com.cinemafx.dao.SessaoDAO;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class FXMLAnchorPaneCadastrosSessoesController implements Initializable {
     
     @FXML
     private TableView<Sessao> tableViewSessoes;
     @FXML
-    private TableColumn<Filme, String> tableColumnSessaoIdSessao;
+    private TableColumn<Sessao, String> tableColumnSessaoIdSessao;
     @FXML
-    private TableColumn<Filme, String> tableColumnSessaoIdFilme;
+    private TableColumn<Sessao, String> tableColumnSessaoIdFilme;
     @FXML
     private Button buttonInserir;
     @FXML
@@ -84,4 +89,64 @@ public class FXMLAnchorPaneCadastrosSessoesController implements Initializable {
         }
     }
     
+    @FXML
+    public void handleButtonInserir() throws IOException{
+        Sessao s = new Sessao();
+        boolean buttonConfirmarClicked = showFXMLAnchorPaneCadastrosSessoesDialog(s);
+        if(buttonConfirmarClicked){
+            sessaoDAO.insert(s);
+            carregarTableViewSessao();
+        }
+    }
+    
+    @FXML
+    public void handleButtonAlterar() throws IOException {
+        Sessao s = tableViewSessoes.getSelectionModel().getSelectedItem();
+        if(s != null){
+            boolean buttonConfirmarClicked = showFXMLAnchorPaneCadastrosSessoesDialog(s);
+            if(buttonConfirmarClicked){
+                sessaoDAO.update(s);
+                carregarTableViewSessao();
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Por favor, escolha uma sessao na Tabela");
+            alert.show();
+        }
+    }
+    
+    @FXML
+    public void handleButtonRemover() throws IOException {
+        Sessao s = tableViewSessoes.getSelectionModel().getSelectedItem();
+        if(s != null){
+            sessaoDAO.delete(s);
+            carregarTableViewSessao();
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Por favor, escolha uma sessao na Tabela");
+            alert.show();
+        }
+    }
+    
+    public boolean showFXMLAnchorPaneCadastrosSessoesDialog(Sessao s) throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(FXMLAnchorPaneCadastrosSessoesDialogController.class.getResource("/br/com/cinemafx/view/FXMLAnchorPaneCadastrosSessoesDialog.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+        
+        //Criando o Stage de Dialog
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("Cadastro de Sessoes");
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);
+        
+        //Setando o cliente no Control
+        FXMLAnchorPaneCadastrosSessoesDialogController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.setSessao(s);
+        
+        //Mostra o Dialog e espera ate que o user feche
+        dialogStage.showAndWait();
+        
+        return controller.isButtonConfirmarClicked();
+    }
 }

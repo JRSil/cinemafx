@@ -14,8 +14,8 @@
             <items>
               <MenuItem fx:id="menuItemCadastrosFilmes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosFilmes" text="Filmes" />
                   <MenuItem fx:id="menuItemCadastrosSessoes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosSessoes" text="Sessoes" />
-                  <MenuItem fx:id="menuItemCadastrosAtendentes" mnemonicParsing="false" text="Atendentes" />
-                  <MenuItem fx:id="menuItemCadastrosSalas" mnemonicParsing="false" text="Salas" />
+                  <MenuItem fx:id="menuItemCadastrosAtendentes" mnemonicParsing="false" onAction="#handleMenuItemCadastrosAtendentes" text="Atendentes" />
+                  <MenuItem fx:id="menuItemCadastrosSalas" mnemonicParsing="false" onAction="#handleMenuItemCadastrosSalas" text="Salas" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Vendas">

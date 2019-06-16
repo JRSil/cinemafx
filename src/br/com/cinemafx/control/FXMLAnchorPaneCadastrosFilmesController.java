@@ -135,7 +135,7 @@ public class FXMLAnchorPaneCadastrosFilmesController implements Initializable {
     
     public boolean showFXMLAnchorPaneCadastrosFilmesDialog(Filme f) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(FXMLAnchorPaneCadastrosFilmesDialogController.class.getResource("br/com/cinemafx/view/FXMLAnchorPaneCadastrosFilmesDialog.fxml"));
+        loader.setLocation(FXMLAnchorPaneCadastrosFilmesDialogController.class.getResource("/br/com/cinemafx/view/FXMLAnchorPaneCadastrosFilmesDialog.fxml"));
         AnchorPane page = (AnchorPane) loader.load();
         
         //Criando o Stage de Dialog
