@@ -72,7 +72,7 @@ public class FXMLAnchorPaneCadastrosSessoesDialogController implements Initializ
         if(validarEntradaDeDados()){
             sessao.setIdSala(Integer.valueOf(textFieldSessoesNumeroSala.getText()));
             sessao.setDia(Date.valueOf(textFieldSessoesDia.getText()));
-            sessao.setHora(Date.valueOf(textFieldSessoesHora.getText()));
+            sessao.setHora(textFieldSessoesHora.getText());
             sessao.setDublagem(Boolean.valueOf(textFieldSessoesDublagem.getText()));
             sessao.setIdFilme(Integer.valueOf(textFieldSessoesCodigoFilme.getText()));
 

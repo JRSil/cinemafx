@@ -26,7 +26,7 @@ public class FXMLAnchorPaneCadastrosSessoesController implements Initializable {
     @FXML
     private TableView<Sessao> tableViewSessoes;
     @FXML
-    private TableColumn<Sessao, String> tableColumnSessaoIdSessao;
+    private TableColumn<Sessao, String> tableColumnSessaoNumeroSala;
     @FXML
     private TableColumn<Sessao, String> tableColumnSessaoIdFilme;
     @FXML
@@ -62,7 +62,7 @@ public class FXMLAnchorPaneCadastrosSessoesController implements Initializable {
     }    
     
     public void carregarTableViewSessao(){
-        tableColumnSessaoIdSessao.setCellValueFactory(new PropertyValueFactory<>("idSessao"));
+        tableColumnSessaoNumeroSala.setCellValueFactory(new PropertyValueFactory<>("idSala"));
         tableColumnSessaoIdFilme.setCellValueFactory(new PropertyValueFactory<>("idFilme"));
         
         listSessoes = sessaoDAO.select();

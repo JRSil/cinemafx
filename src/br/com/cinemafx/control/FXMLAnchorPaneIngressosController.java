@@ -71,7 +71,7 @@ public class FXMLAnchorPaneIngressosController implements Initializable {
         tableColumnIngressoSessao.setCellValueFactory(new PropertyValueFactory<>("sessao"));
         tableColumnIngressoTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
         
-        listIngresso = IngressoDAO.select();
+        listIngresso = ingressoDAO.select();
         
         observableListIngresso = FXCollections.observableArrayList(listIngresso);
         tableViewIngresso.setItems(observableListIngresso);
@@ -154,6 +154,4 @@ public class FXMLAnchorPaneIngressosController implements Initializable {
         return controller.isButtonConfirmarClicked();
     }
     
-}
-  
 }

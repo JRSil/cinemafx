@@ -29,7 +29,7 @@
             <Label text="Hora" GridPane.rowIndex="2" />
             <Label text="Dublagem" GridPane.rowIndex="3" />
             <Label text="Codigo do Filme" GridPane.rowIndex="4" />
-            <MaskedTextField mask="####" fx:id="textFieldSessoesNumeroSala" GridPane.columnIndex="1" />
+            <MaskedTextField mask="####" plainText="0000" fx:id="textFieldSessoesNumeroSala" GridPane.columnIndex="1" />
             <MaskedTextField mask="####-##-##" placeholder="AAAA-MM-DD" fx:id="textFieldSessoesDia" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <MaskedTextField mask="##:##" placeholder="hh:mm" fx:id="textFieldSessoesHora" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="textFieldSessoesDublagem" GridPane.columnIndex="1" GridPane.rowIndex="3" />

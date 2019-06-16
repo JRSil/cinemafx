@@ -22,7 +22,7 @@ public class SessaoDAO implements Dao {
             
             ps.setInt(1, s.getIdSala());
             ps.setDate(2, (Date) s.getDia());
-            ps.setDate(3, (Date) s.getHora());
+            ps.setString(3, s.getHora());
             ps.setBoolean(4, s.isDublagem());
             ps.setInt(5, s.getIdFilme());
             
@@ -35,14 +35,14 @@ public class SessaoDAO implements Dao {
     @Override
     public void update(Object o) {
         Sessao s = (Sessao) o;
-        String sql = "update sala set idSala=?,dia=?,hora=?,dublagem=?,idFilme=? where idSessao=?";
+        String sql = "update sessao set idSala=?,dia=?,hora=?,dublagem=?,idFilme=? where idSessao=?";
         
         try{
             PreparedStatement ps = Conector.getConexao().prepareStatement(sql);
             
             ps.setInt(1, s.getIdSala());
             ps.setDate(2, (Date) s.getDia());
-            ps.setDate(3, (Date) s.getHora());
+            ps.setString(3, s.getHora());
             ps.setBoolean(4, s.isDublagem());
             ps.setInt(5, s.getIdFilme());
         }catch(SQLException e){
@@ -53,7 +53,7 @@ public class SessaoDAO implements Dao {
     @Override
     public void delete(Object o) {
         Sessao s = (Sessao) o;
-        String sql = "delete from sala where idSessao=?";
+        String sql = "delete from sessao where idSessao=?";
         
         try{
             PreparedStatement ps = Conector.getConexao().prepareStatement(sql);
@@ -69,16 +69,17 @@ public class SessaoDAO implements Dao {
     @Override
     public Object select(int i) {
         Sessao s = new Sessao();
-        String sql = "select * from sala where idSessao=?";
+        String sql = "select * from sessao where idSessao=?";
         
         try{
             PreparedStatement ps = Conector.getConexao().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             
             while(rs.next()){
+                
                 s.setIdSala(rs.getInt("idSala"));
                 s.setDia(rs.getDate("dia"));
-                s.setHora(rs.getDate("hora"));
+                s.setHora(rs.getString("hora"));
                 s.setDublagem(rs.getBoolean("dublagem"));
                 s.setIdFilme(rs.getInt("idFilme"));
             }
@@ -91,7 +92,7 @@ public class SessaoDAO implements Dao {
     @Override
     public List select() {
         List list = new ArrayList();
-        String sql = "select * from sala";
+        String sql = "select * from sessao";
         
         try{
             PreparedStatement ps = Conector.getConexao().prepareStatement(sql);
@@ -103,7 +104,7 @@ public class SessaoDAO implements Dao {
                 s.setIdSessao(rs.getInt("idSessao"));
                 s.setIdSala(rs.getInt("idSala"));
                 s.setDia(rs.getDate("dia"));
-                s.setHora(rs.getDate("hora"));
+                s.setHora(rs.getString("hora"));
                 s.setDublagem(rs.getBoolean("dublagem"));
                 s.setIdFilme(rs.getInt("idFilme"));
                 

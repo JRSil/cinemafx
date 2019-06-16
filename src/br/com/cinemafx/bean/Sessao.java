@@ -5,7 +5,8 @@ import java.util.Date;
 public class Sessao {
     private Integer idSessao;
     private Integer idSala;
-    private Date dia, hora;
+    private Date dia;
+    private String hora;
     private boolean dublagem;
     private Integer idFilme;
 
@@ -33,11 +34,11 @@ public class Sessao {
         this.dia = dia;
     }
 
-    public Date getHora() {
+    public String getHora() {
         return hora;
     }
 
-    public void setHora(Date hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 

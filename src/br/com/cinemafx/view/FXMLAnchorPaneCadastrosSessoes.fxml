@@ -14,7 +14,7 @@
                <children>
                   <TableView fx:id="tableViewSessoes" layoutX="6.0" layoutY="45.0" prefHeight="376.0" prefWidth="211.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn fx:id="tableColumnSessaoIdSessao" prefWidth="75.0" text="Id Sessao" />
+                      <TableColumn fx:id="tableColumnSessaoNumeroSala" prefWidth="75.0" text="Numero Sala" />
                       <TableColumn fx:id="tableColumnSessaoIdFilme" prefWidth="75.0" text="Id Filme" />
                     </columns>
                      <columnResizePolicy>
