@@ -3,10 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/control/FXMLAnchorPaneIngressosController.java</file>
             <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/dao/IngressoDAO.java</file>
             <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/view/FXMLAnchorPaneIngressos.fxml</file>
             <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosFilmesController.java</file>
+=======
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosFilmesController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosSessoesController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/util/Conector.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosAtendentesController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/Main.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosSalasController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosSessoesDialogController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLVBoxMainController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosAtendentesDialogController.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosFilmesDialogController.java</file>
+>>>>>>> b062fab95f9bca839f05b4605caa477085f8c846
         </group>
     </open-files>
 </project-private>
