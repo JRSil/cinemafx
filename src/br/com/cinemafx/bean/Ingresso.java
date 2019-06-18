@@ -2,7 +2,7 @@ package br.com.cinemafx.bean;
 
 public class Ingresso {
     private Integer idIngresso;
-    private Integer idSessao;
+    private int idSessao;
     private int quantidade;
     private float total;
     private String formaPgmt;
@@ -15,11 +15,11 @@ public class Ingresso {
         this.idIngresso = idIngresso;
     }
 
-    public Integer getIdSessao() {
+    public int getIdSessao() {
         return idSessao;
     }
 
-    public void setIdSessao(Integer idSessao) {
+    public void setIdSessao(int idSessao) {
         this.idSessao = idSessao;
     }
 

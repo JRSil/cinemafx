@@ -67,8 +67,8 @@ public class FXMLAnchorPaneIngressosController implements Initializable {
     }
     
     public void carregarTableViewIngresso(){
-        tableColumnIngressoCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
-        tableColumnIngressoSessao.setCellValueFactory(new PropertyValueFactory<>("sessao"));
+        tableColumnIngressoCodigo.setCellValueFactory(new PropertyValueFactory<>("idIngresso"));
+        tableColumnIngressoSessao.setCellValueFactory(new PropertyValueFactory<>("idSessao"));
         tableColumnIngressoTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
         
         listIngresso = ingressoDAO.select();
@@ -96,7 +96,7 @@ public class FXMLAnchorPaneIngressosController implements Initializable {
     @FXML
     public void handleButtonInserir() throws IOException{
         Ingresso i = new Ingresso();
-        boolean buttonConfirmarClicked = showFXMLAnchorPaneCadastrosIngressoDialog(i);
+        boolean buttonConfirmarClicked = showFXMLAnchorPaneIngressosDialog(i);
         if(buttonConfirmarClicked){
             ingressoDAO.insert(i);
             carregarTableViewIngresso();
@@ -107,7 +107,7 @@ public class FXMLAnchorPaneIngressosController implements Initializable {
     public void handleButtonAlterar() throws IOException {
         Ingresso i = tableViewIngresso.getSelectionModel().getSelectedItem();
         if(i != null){
-            boolean buttonConfirmarClicked = showFXMLAnchorPaneCadastrosIngressoDialog(i);
+            boolean buttonConfirmarClicked = showFXMLAnchorPaneIngressosDialog(i);
             if(buttonConfirmarClicked){
                 ingressoDAO.update(i);
                 carregarTableViewIngresso();
@@ -132,7 +132,7 @@ public class FXMLAnchorPaneIngressosController implements Initializable {
         }
     }
     
-    public boolean showFXMLAnchorPaneCadastrosIngressoDialog(Ingresso i) throws IOException {
+    public boolean showFXMLAnchorPaneIngressosDialog(Ingresso i) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(FXMLAnchorPaneIngressosDialogController.class.getResource("/br/com/cinemafx/view/FXMLAnchorPaneIngressosDialog.fxml"));
         AnchorPane page = (AnchorPane) loader.load();

@@ -7,8 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="br.com.cinemafx.control.FXMLAnchorPaneIngressosController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cinemafx.control.FXMLAnchorPaneIngressosController">
    <children>
       <SplitPane dividerPositions="0.4013377926421405" prefHeight="434.0" prefWidth="693.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -30,13 +29,13 @@
                         <Label text="Código" />
                         <Label text="Sessão" GridPane.rowIndex="1" />
                         <Label text="Quantidade" GridPane.rowIndex="2" />
-                        <Label fx:id="labelIngressoCodigo" text="Label" GridPane.columnIndex="1" />
-                        <Label fx:id="labelIngressoSessao" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="labelIngressoQuantidade" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelIngressoCodigo" GridPane.columnIndex="1" />
+                        <Label fx:id="labelIngressoSessao" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelIngressoQuantidade" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label text="Total" GridPane.rowIndex="3" />
                         <Label text="Forma pagamento" GridPane.rowIndex="4" />
-                        <Label fx:id="labelIngressoTotal" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="labelIngressoFormaPgmt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelIngressoTotal" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelIngressoFormaPgmt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                      </children>
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -52,9 +51,9 @@
                   </GridPane>
                   <Group>
                      <children>
-                        <Button fx:id="buttonAlterar" layoutX="127.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
-                        <Button fx:id="buttonInserir" layoutX="30.0" layoutY="316.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
-                        <Button fx:id="buttonRemover" layoutX="223.0" layoutY="316.0" mnemonicParsing="false" text="Remover" />
+                        <Button fx:id="buttonAlterar" layoutX="127.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleButtonAlterar" prefHeight="25.0" prefWidth="64.0" text="Alterar" />
+                        <Button fx:id="buttonInserir" layoutX="30.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleButtonInserir" prefHeight="25.0" prefWidth="64.0" text="Inserir" />
+                        <Button fx:id="buttonRemover" layoutX="223.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleButtonRemover" text="Remover" />
                      </children>
                   </Group>
                   <Label layoutX="94.0" layoutY="21.0" text="Detalhes da venda">

@@ -16,11 +16,11 @@ import javafx.stage.Stage;
 public class FXMLAnchorPaneIngressosDialogController implements Initializable {
     
     @FXML
-    private TextField textFieldIngressoSessao;
+    private TextField textFieldIngressosSessao;
     @FXML
-    private TextField textFieldIngressoQtd;
+    private TextField textFieldIngressosQtd;
     @FXML
-    private TextField textFieldIngressoFormaPgmt;
+    private TextField textFieldIngressosFormaPgmt;
     @FXML
     private Button buttonConfirmar;
     @FXML
@@ -57,17 +57,17 @@ public class FXMLAnchorPaneIngressosDialogController implements Initializable {
 
     public void setIngresso(Ingresso ingresso) {
         this.ingresso = ingresso;
-        this.textFieldIngressoSessao.setText(String.valueOf(ingresso.getIdSessao()));
-        this.textFieldIngressoQtd.setText(String.valueOf(ingresso.getQuantidade()));
-        this.textFieldIngressoFormaPgmt.setText(String.valueOf(ingresso.getFormaPgmt()));
+        this.textFieldIngressosSessao.setText(String.valueOf(ingresso.getIdSessao()));
+        this.textFieldIngressosQtd.setText(String.valueOf(ingresso.getQuantidade()));
+        this.textFieldIngressosFormaPgmt.setText(String.valueOf(ingresso.getFormaPgmt()));
     }
     
     @FXML
     public void handleButtonConfirmar(){
         if(validarEntradaDeDados()){
-            ingresso.setIdSessao(Integer.valueOf(textFieldIngressoSessao.getText()));
-            ingresso.setQuantidade(Integer.valueOf(textFieldIngressoQtd.getText()));
-            ingresso.setFormaPgmt(String.valueOf(textFieldIngressoFormaPgmt.getText()));
+            ingresso.setIdSessao(Integer.valueOf(textFieldIngressosSessao.getText()));
+            ingresso.setQuantidade(Integer.valueOf(textFieldIngressosQtd.getText()));
+            ingresso.setFormaPgmt(String.valueOf(textFieldIngressosFormaPgmt.getText()));
 
             buttonConfirmarClicked = true;
             dialogStage.close();
@@ -82,13 +82,13 @@ public class FXMLAnchorPaneIngressosDialogController implements Initializable {
     private boolean validarEntradaDeDados(){
         String errorMessage = "";
         
-        if(textFieldIngressoSessao.getText() == null || textFieldIngressoSessao.getText().length() == 0){
+        if(textFieldIngressosSessao.getText() == null || textFieldIngressosSessao.getText().length() == 0){
             errorMessage += "Numero da sessão invalido!\n";
         }
-        if(textFieldIngressoQtd.getText() == null || textFieldIngressoQtd.getText().length() == 0){
+        if(textFieldIngressosQtd.getText() == null || textFieldIngressosQtd.getText().length() == 0){
             errorMessage += "Quantidade invalida!\n";
         }
-        if(textFieldIngressoFormaPgmt.getText() == null || textFieldIngressoFormaPgmt.getText().length() == 0){
+        if(textFieldIngressosFormaPgmt.getText() == null || textFieldIngressosFormaPgmt.getText().length() == 0){
             errorMessage += "Forma de pagamento invalida!\n";
         }
         

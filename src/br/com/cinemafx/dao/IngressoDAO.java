@@ -66,7 +66,7 @@ public class IngressoDAO implements Dao {
     @Override
     public Object select(int i) {
         Ingresso ing = new Ingresso();
-        String sql = "select * from sala where idIngresso=?";
+        String sql = "select * from ingresso where idIngresso=?";
         
         try{
             PreparedStatement ps = Conector.getConexao().prepareStatement(sql);
