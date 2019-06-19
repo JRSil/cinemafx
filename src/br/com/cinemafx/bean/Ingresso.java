@@ -35,10 +35,14 @@ public class Ingresso {
         return total;
     }
 
-    public void setTotal(float total) {
-        this.total = total;
+    public void setTotal(float total, int quantidade ) {
+        if(this.total == 0){
+            this.total = quantidade * 10;
+        }else{
+            this.total = total;
+        }
     }
-
+    
     public String getFormaPgmt() {
         return formaPgmt;
     }
@@ -46,4 +50,6 @@ public class Ingresso {
     public void setFormaPgmt(String formaPgmt) {
         this.formaPgmt = formaPgmt;
     }
+
+    
 }

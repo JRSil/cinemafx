@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/view/FXMLAnchorPaneCadastrosSessoesDialog.fxml</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/bean/Sessao.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosSessoesController.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/util/Conector.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/Main.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLAnchorPaneCadastrosSessoesDialogController.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/control/FXMLVBoxMainController.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/CinemaFX/src/br/com/cinemafx/dao/SessaoDAO.java</file>
+            <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/bean/Ingresso.java</file>
+            <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/control/FXMLAnchorPaneIngressosController.java</file>
+            <file>file:/C:/Users/felip/Documents/POO/cinemafx/src/br/com/cinemafx/dao/IngressoDAO.java</file>
         </group>
     </open-files>
 </project-private>
