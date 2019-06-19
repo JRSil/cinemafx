@@ -68,6 +68,7 @@ public class FXMLAnchorPaneIngressosDialogController implements Initializable {
             ingresso.setIdSessao(Integer.valueOf(textFieldIngressosSessao.getText()));
             ingresso.setQuantidade(Integer.valueOf(textFieldIngressosQtd.getText()));
             ingresso.setFormaPgmt(String.valueOf(textFieldIngressosFormaPgmt.getText()));
+            ingresso.setTotal(ingresso.getQuantidade() * 10);
 
             buttonConfirmarClicked = true;
             dialogStage.close();

@@ -75,7 +75,7 @@ public class IngressoDAO implements Dao {
             while(rs.next()){
                 ing.setIdSessao(rs.getInt("idSessao"));
                 ing.setQuantidade(rs.getInt("quantidade"));
-                ing.setTotal(rs.getFloat("total"),0);
+                ing.setTotal(rs.getFloat("total"));
                 ing.setFormaPgmt(rs.getString("formaPgmt"));
             }
         }catch(SQLException e){
@@ -99,7 +99,7 @@ public class IngressoDAO implements Dao {
                 ing.setIdIngresso(rs.getInt("idIngresso"));
                 ing.setIdSessao(rs.getInt("idSessao"));
                 ing.setQuantidade(rs.getInt("quantidade"));
-                ing.setTotal(rs.getFloat("total"),0);
+                ing.setTotal(rs.getFloat("total"));
                 ing.setFormaPgmt(rs.getString("formaPgmt"));
                 
                 list.add(ing);
