@@ -45,6 +45,8 @@ public class SessaoDAO implements Dao {
             ps.setString(3, s.getHora());
             ps.setBoolean(4, s.isDublagem());
             ps.setInt(5, s.getIdFilme());
+            
+            ps.execute();
         }catch(SQLException e){
             e.printStackTrace();
         }

@@ -38,6 +38,8 @@ public class SalaDAO implements Dao {
             
             ps.setString(1, s.getTipoImagem());
             ps.setInt(2, s.getQtdMax());
+            
+            ps.execute();
         }catch(SQLException e){
             e.printStackTrace();
         }

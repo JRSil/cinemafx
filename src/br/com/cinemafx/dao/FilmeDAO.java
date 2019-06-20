@@ -52,6 +52,8 @@ public class FilmeDAO implements Dao {
             ps.setString(6, f.getCategoria());
             ps.setInt(7, f.getIdFilme());
             
+            ps.execute();
+            
         }catch(SQLException e){
             e.printStackTrace();
         }

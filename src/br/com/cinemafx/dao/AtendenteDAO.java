@@ -50,6 +50,8 @@ public class AtendenteDAO implements Dao {
             ps.setString(6, a.getSenha());
             ps.setString(7, a.getTipo());
             ps.setInt(8, a.getIdAtendente());
+            
+            ps.execute();
         }catch(SQLException e){
             e.printStackTrace();
         }

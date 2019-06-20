@@ -42,6 +42,8 @@ public class IngressoDAO implements Dao {
             ps.setInt(2, ing.getQuantidade());
             ps.setFloat(3, ing.getTotal());
             ps.setString(4, ing.getFormaPgmt());
+            
+            ps.execute();
         }catch(SQLException e){
             e.printStackTrace();
         }
